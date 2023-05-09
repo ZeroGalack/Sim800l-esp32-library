@@ -9,10 +9,10 @@ Sim800L GSM;
  * Sim800L GSM(RX, TX, RESET, LED);
  */
 
-const String apn = "zap.vivo.com.br";                                       // APN 
-const String apn_u = "vivo";                                                // APN-Username 
-const String apn_p = "vivo";                                                // APN-Password 
-const String url = "http://www.exemplo.com/teste?name=00&lat=00&lon=00";    // Server URL
+const String apn = "";     // APN 
+const String apn_u = "";   // APN-Username 
+const String apn_p = "";   // APN-Password 
+const String url = "";     // Server URL
  
 
 

@@ -4,12 +4,11 @@
 Sim800L GSM;
 
 
-const String apn = "claro.com.br";                                                          // APN 
-const String apn_u = "claro";                                                               // APN-Username 
-const String apn_p = "claro";                                                               // APN-Password 
-const String url = "http://em800.gensokyo.shop/api/v1/trigger/isca?name=00&lat=00&lon=00";  // Server URL
+const String apn = "";     // APN 
+const String apn_u = "";   // APN-Username 
+const String apn_p = "";   // APN-Password 
+const String url = "";     // Server URL
  
-
 
 void setup() {
   Serial.begin(9600);
@@ -40,8 +39,15 @@ void loop() {
   GSM.Start_HTTP(url);
   delay(1000);
 
+  GSM.Send_CONFIG_HTTP(192, 5000, "DATA");
   Serial.println(GSM.Send_HTTP(0));
   delay(1000);
+  
+  // Post method 
+  //GSM.Send_CONFIG_HTTP(192, 5000, "token=" + token + "&disp_id=1&event_data=");
+  //Serial.println(GSM.Send_HTTP(1));
+  //delay(1000);
+
 
   GSM.Close_Connection();
   delay(1000);

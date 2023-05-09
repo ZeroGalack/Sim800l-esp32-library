@@ -19,7 +19,7 @@ void setup() {
     }
   }
 
-  GSM.sendSMS("+5524992830830", "ola teste kkk");
+  GSM.sendSMS("+5524*********", "Ola");
   delay(1000);
 }
 
